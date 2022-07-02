@@ -1,0 +1,86 @@
+<div class="container my-4">
+    <div class="row">
+      <div class="col-6 info">
+      </div>
+      <div class="col-6 white">
+        <form name="regestrationForm" [formGroup]="regestrationForm" (ngSubmit)="onSubmit()">
+          <!-- Name Field -->
+          <div class="row">
+            <div class="col">
+              <h1 class="text-center mb-4">Confirm Your Booking</h1>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col ">
+              <div class="form-group">
+                <label>First Name <span class="mandatory">*</span></label>
+                <input type="text" class="form-control" formControlName="firstName" placeholder="Your First Name">
+                <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)" class="alert alert-danger">
+                  <div *ngIf="firstName && firstName?.errors" class="customErrMsg">
+                    First Name is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label>Last Name <span class="mandatory">*</span></label>
+                <input type="text" class="form-control" formControlName="lastName" placeholder="Your Last Name">
+                <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)" class="alert alert-danger">
+                  <div *ngIf="lastName && lastName?.errors" class="customErrMsg">
+                    Last Name is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Gender Information -->
+          <div class="row  mt-4">
+            <div class="col">
+              <label>Select Gender <span class="mandatory">*</span></label>
+
+              <select class="custom-select" id="gender" formControlName="gender">
+                <option *ngFor="let g of genders" [ngValue]="g">{{ g }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col">
+              <div class="form-group">
+                <label>Email <span class="mandatory">*</span></label>
+                <input type="text" class="form-control" formControlName="userEmail" placeholder="Your Email">
+                <div *ngIf="userEmail?.invalid && (userEmail?.dirty || userEmail?.touched)" class="alert alert-danger">
+                  <div *ngIf="userEmail && userEmail?.errors" class="customErrMsg">
+                    Email is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col">
+              <div class="form-group">
+                <label>Number <span class="mandatory">*</span></label>
+                <input type="number" class="form-control" formControlName="mobileNo" placeholder="Your Number">
+                <div *ngIf="mobileNo && mobileNo?.invalid && (mobileNo?.dirty || mobileNo?.touched)"
+                  class="alert alert-danger">
+                  <div *ngIf="mobileNo && mobileNo?.errors && mobileNo?.errors?.['required']" class="customErrMsg">
+                    Number is required.
+                  </div>
+                  <div *ngIf="mobileNo && mobileNo?.errors && mobileNo?.errors?.['pattern']" class="customErrMsg">
+                    Please Enter 10 Digit Mobile No.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-4 justify-content-center">
+            <button [disabled]="!regestrationForm.valid" class="submitBtn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>

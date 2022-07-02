@@ -1,0 +1,71 @@
+form {
+  padding: 20px;
+}
+
+.white{
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+
+.container {
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    background: hsla(184, 85%, 63%, 1);
+
+background: linear-gradient(90deg, hsla(184, 85%, 63%, 1) 0%, hsla(240, 46%, 76%, 1) 50%, hsla(319, 72%, 75%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(184, 85%, 63%, 1) 0%, hsla(240, 46%, 76%, 1) 50%, hsla(319, 72%, 75%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(184, 85%, 63%, 1) 0%, hsla(240, 46%, 76%, 1) 50%, hsla(319, 72%, 75%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4FE6F1", endColorstr="#A6A6DE", GradientType=1 );
+  /* background-image: linear-gradient(to right top, #051937, #2a2962, #623287, #a42f9f, #eb12a8); */
+
+}
+
+.form-control {
+  border-radius: 10px !important;
+}
+
+.customErrMsg {
+  font-size: 12px !important;
+}
+
+.mandatory {
+  color: #f15824;
+}
+
+
+.alert {
+  padding: 5px !important;
+}
+
+.submitBtn {
+  border: none;
+  font-size: 18px;
+  width: 180px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background-color: #005CBA;
+  color: #ffffff;
+}
+
+.submitBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.info {
+  /* background-image: url(../../assets/bonbon-travelling-by-plane-with-one-suitcase-1.png); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
